@@ -1,38 +1,121 @@
-.App {
-  text-align: center;
+* {
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+/*  background-image: url("./img/pexels-balázs-utasi-998679.png"); */
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+  font-family: "Karla";
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+.main--container {
+  background: linear-gradient(
+    to bottom,
+    rgba(20, 92, 186, 0.4),
+    rgba(222, 193, 151, 0.4)
+  );
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  width: 400px;
+  height: 420px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+}
+.tenzies--container {
+  width: 320px;
+  height: 320px;
+  background-color: #f5f5f5;
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  text-align: center;
+  position: relative;
+}
+.highscore {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 120px;
+  align-items: flex-start;
+  left: 5px;
+  top: 5px;
+}
+.highscore--title {
+  font-weight: bold;
+  font-size: 12px;
+  margin: 1px;
+}
+.highscore--stats {
+  font-size: 0.6rem;
+  margin: 1px;
+}
+
+.text--content {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  width: 230px;
+}
+
+.text--content > h1 {
+  font-size: 30px;
+  line-height: 30px;
+  letter-spacing: -0.03em;
+  margin-top: 25px;
+  margin-bottom: 4px;
+}
+.text--content > h4 {
+  margin-top: 0px;
+  font-family: "Karla";
+  font-weight: 400;
+  font-size: 13px;
+  letter-spacing: -0.03em;
+}
+
+.dice--container {
+  display: grid;
+  grid-template: auto auto / repeat(5, 1fr);
+  margin-top: -8px;
+}
+
+.dice--images {
+  margin: 10px;
+  background-color: #f5f5f5;
+  display: flex;
+  width: 40px;
+  height: 40px;
+
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.button--roll {
+  width: 120px;
+  height: 36px;
+  font-family: "Karla";
+  font-weight: 700;
+  font-size: 16px;
   color: white;
+  background-color: rgb(55, 55, 244);
+  border: none;
+  border-radius: 4px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  line-height: 12px;
 }
-
-.App-link {
-  color: #61dafb;
+.count--container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.roll--count {
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
